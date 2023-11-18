@@ -33,7 +33,7 @@ Ensure you have Java Development Kit (JDK) installed on your machine.
 git clone https://github.com/SandeepVashishtha/tic-tac-toe
 
 # Navigate to the project directory
-cd java-tic-tac-toe
+cd tic-tac-toe
 ```
 
 ## Usage
@@ -62,6 +62,6 @@ Contributions are welcome! Follow these steps to contribute to the project:
    Clone your forked repository to your local machine:
 
    ```bash
-   git clone https://github.com/SandeepVashishtha/tic-tac-toe.git
+   git clone https://github.com/SandeepVashishtha/tic-tac-toe
 
 
