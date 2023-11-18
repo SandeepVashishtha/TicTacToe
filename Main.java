@@ -229,7 +229,3 @@ class TicTacToe implements ActionListener {
         textfield.setText("O wins");
     }
 }
-
-    // ... (existing methods)
-
-    // Rest of the code remains unchanged
