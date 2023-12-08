@@ -23,6 +23,11 @@ class TicTacToe implements ActionListener {
     JButton resetButton = new JButton("Reset");
     boolean player1_turn;
 
+    int player1Score = 0;
+    int player2Score = 0;
+    JLabel player1ScoreLabel = new JLabel("Player 1: 0");
+    JLabel player2ScoreLabel = new JLabel("Player 2: 0");
+
     TicTacToe() {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 800);
@@ -38,6 +43,9 @@ class TicTacToe implements ActionListener {
 
         title_panel.setLayout(new BorderLayout());
         title_panel.setBounds(0, 0, 800, 100);
+
+        title_panel.add(player1ScoreLabel, BorderLayout.WEST);
+        title_panel.add(player2ScoreLabel, BorderLayout.EAST);
 
         button_panel.setLayout(new GridLayout(3, 3));
         button_panel.setBackground(new Color(150, 150, 150));
@@ -121,6 +129,10 @@ class TicTacToe implements ActionListener {
         } else {
             textfield.setText("O turn");
         }
+        player1Score = 0;
+        player2Score = 0;
+        player1ScoreLabel.setText("Player 1: 0");
+        player2ScoreLabel.setText("Player 2: 0");
     }
     public void check() {
         // check X win conditions
@@ -216,6 +228,9 @@ class TicTacToe implements ActionListener {
             buttons[i].setEnabled(false);
         }
         textfield.setText("X wins");
+        player1Score++;
+        player1ScoreLabel.setText("Player 1: " + player1Score);
+        textfield.setText("Player 1 wins");
     }
 
     public void oWins(int a, int b, int c) {
@@ -227,5 +242,8 @@ class TicTacToe implements ActionListener {
             buttons[i].setEnabled(false);
         }
         textfield.setText("O wins");
+        player2Score++;
+        player2ScoreLabel.setText("Player 2: " + player2Score);
+        textfield.setText("Player 2 wins");
     }
 }
