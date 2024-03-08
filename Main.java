@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            TicTacToe tictactoe = new TicTacToe();
+            new TicTacToe();
         });
     }
 }
